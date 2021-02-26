@@ -34,6 +34,8 @@ img {
     padding: 10px;
     border-radius: 4px;
     font-size: 25px;
+
+    transition: .2s ease-in-out;
 }
 
 span {
@@ -48,6 +50,11 @@ span {
 
     align-items: center;
     justify-content: center;
+}
+
+#result {
+    transition: .3s ease-in-out;
+    font-size: 35px;
 }
 
 .choices {

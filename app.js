@@ -6,6 +6,9 @@ const rock = document.getElementsByClassName('rock')[0];
 const paper = document.getElementsByClassName('paper')[0];
 const scissors = document.getElementsByClassName('scissors')[0];
 
+const playerBadge = document.getElementById('user-badge');
+const comBadge = document.getElementById('com-badge');
+
 let userScore = 0;
 let comScore = 0;
 
@@ -22,6 +25,16 @@ function win() {
 
     const winMsg = "You Won!";
     resultElem.innerHTML = winMsg;
+    resultElem.style.color = "#2FDEB6";
+    resultElem.style.fontSize = "40px";
+
+    playerBadge.style.backgroundColor = "#2FDEB6";
+
+    setTimeout(() => {
+        playerBadge.style.backgroundColor = "#171923";
+        resultElem.style.color = "#FFFFFF";
+        resultElem.style.fontSize = "35px";
+    }, 1000)
 }
 
 function lose() {
@@ -30,11 +43,29 @@ function lose() {
 
     const loseMsg = "You Lost!";
     resultElem.innerHTML = loseMsg;
+    resultElem.style.color = "#F44D4D";
+    resultElem.style.fontSize = "40px";
+
+    comBadge.style.backgroundColor = "#F44D4D";
+
+    setTimeout(() => {
+        comBadge.style.backgroundColor = "#171923";
+        resultElem.style.color = "#FFFFFF";
+        resultElem.style.fontSize = "35px";
+    }, 1000)
 }
 
 function draw() {
     const drawMsg = "Draw!"
     resultElem.innerHTML = drawMsg;
+
+    resultElem.style.color = "#0FACF5";
+    resultElem.style.fontSize = "40px";
+
+    setTimeout(() => {
+        resultElem.style.color = "#FFFFFF";
+        resultElem.style.fontSize = "35px";
+    }, 1000)
 }
 
 function winCheck(userChoice) {
