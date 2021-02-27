@@ -9,6 +9,8 @@ const scissors = document.getElementsByClassName('scissors')[0];
 const playerBadge = document.getElementById('user-badge');
 const comBadge = document.getElementById('com-badge');
 
+const choicePicked = document.getElementById('choice-picked');
+
 let userScore = 0;
 let comScore = 0;
 
@@ -68,6 +70,20 @@ function draw() {
     }, 1000)
 }
 
+function comChoicePicked(comChoice) {
+    if (comChoice == 'r'){
+        comChoice = "Rock";
+    } else if (comChoice == 's') {
+        comChoice = "Scissors";
+    } else if (comChoice == 'p') {
+        comChoice = "Paper";
+    } else {
+        comChoice = "Internal Error";
+    }
+
+    choicePicked.innerHTML = "Computer picked: " + comChoice;
+}
+
 function winCheck(userChoice) {
     const comChoice = getComChoice();
 
@@ -77,16 +93,19 @@ function winCheck(userChoice) {
         case 'sp':
         case 'pr':
             win()
+            comChoicePicked(comChoice)
             break;
         case 'sr':
         case 'ps':
         case 'rp':
             lose()
+            comChoicePicked(comChoice)
             break;
         case 'rr':
         case 'ss':
         case 'pp':
             draw()
+            comChoicePicked(comChoice)
             break;
     }
 }

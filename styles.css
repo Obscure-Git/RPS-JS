@@ -46,7 +46,7 @@ span {
 .result {
     display: flex;
 
-    margin-top: 10%;
+    margin-top: 5%;
 
     align-items: center;
     justify-content: center;
@@ -55,6 +55,15 @@ span {
 #result {
     transition: .3s ease-in-out;
     font-size: 35px;
+}
+
+.choice-picked {
+    display: flex;
+
+    margin-top: 1%;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .choices {
@@ -86,4 +95,72 @@ span {
     background: radial-gradient(#14C2F9, #0A98F0);
     border: 5px solid #0993EF;
     box-shadow: 1px 4px 70px 7px #10639D;
+}
+
+#choice-picked {
+    font-size: 23px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #171923;
+    width: 100vw;
+    height: 40px;
+
+    font-size: 21px;
+}
+
+.footer footer a {
+    text-decoration: none;
+    color: #0993EF;
+
+    transition: .3s ease;
+}
+
+.footer footer a:hover {
+    font-size: 30px;
+    color: #0993EF;
+}
+
+@media (max-width: 700px) {
+    .choices {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        cursor: auto;
+    }
+
+    .choice {
+        display: flex;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    #result {
+        font-size: 30px;
+    }
+
+    #choice-picked {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+
+    .score-board {
+        height: 60px;
+    }
 }
