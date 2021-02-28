@@ -138,17 +138,24 @@ span {
 }
 
 @media (max-width: 700px) {
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
     .choices {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
         cursor: auto;
+
+        transform: translate(-50%, -45%);
     }
 
     .choice {
         display: flex;
         padding: 5px;
-        margin: 15px;
+        margin: 10px;
     }
 
     #result {
@@ -162,5 +169,43 @@ span {
 
     .score-board {
         height: 60px;
+    }
+}
+
+@media (max-height: 560px) {
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .choices {
+        display: flex;
+        flex-direction: row;
+        cursor: auto;
+
+        transform: translate(-50%, -45%);
+    }
+
+    .choice {
+        display: flex;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    #result {
+        font-size: 20px;
+    }
+
+    #choice-picked {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .score-board {
+        height: 50px;
+    }
+
+    .badge {
+        font-size: 15px;
     }
 }
