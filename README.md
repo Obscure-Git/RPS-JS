@@ -28,7 +28,3 @@ Live demo can be found [**here**](https://rps-js-app.netlify.app/).
 **Scores**
 
 <img src="./src/scores.png">
-
-## **Watch the repo's full activity as shown below to get notified about changes made to the repository!**
-
-<img src="./src/watch.png">
